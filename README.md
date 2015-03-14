@@ -12,7 +12,7 @@ without overloading default UI.
 ![Animated Example](https://raw.githubusercontent.com/ask-fm/AFMSlidingCell/master/res/sliding_cell.gif)
 
 AFMSlidingCell supports up to two differently sized UIButtons added to the cell's right side
-and can be used both directly from the Interface Builder and as superclass for custom cell.
+and can be used both directly from the Interface Builder and as a superclass for custom cell.
 
 ## Usage
 
@@ -22,7 +22,7 @@ class to AFMSlidingCell in Identity inspector tap.
 Most common usage way is creating custom UITableViewCell. Simply subclass AFMSlidingCell
 instead of UITableViewCell and you're ready to go!
 
-After dequeuing your cell, UIButton can be added to it:
+After dequeuing your cell, you can add UIButton:
 
 ```objective-c
 AFMSlidingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AFMSlidingCell" forIndexPath:indexPath];
@@ -39,12 +39,14 @@ Two buttons may be added in total:
 ```objective-c
 [cell addFirstButton:firstButton withWidth:23.0 withTappedBlock:^(AFMSlidingCell *cell) {
   NSLog(@"First button tapped");
+}
 [cell addSecondButton:button withWidth:42.0 withTappedBlock:^(AFMSlidingCell *cell) {
   NSLog(@"Second tapped");
+}
 ```
 
-In case you want to add only one UIButton, there is no difference whether you add it as first
-or as second button.
+In case you want to add only one UIButton, there is no difference whether you add it as a first
+or as a second button.
 
 You get additional control over your cell, e.g. it possible to show or hide added buttons
 programmatically:
