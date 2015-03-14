@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                        to any cell.
                        DESC
   s.homepage         = "https://github.com/ask-fm/AFMSlidingCell"
-  s.screenshots     = "https://raw.githubusercontent.com/ask-fm/AFMInfoBanner/master/res/red_banner.gif", "https://raw.githubusercontent.com/ask-fm/AFMInfoBanner/master/res/red_banner.png"
+  s.screenshots     = "https://raw.githubusercontent.com/ask-fm/AFMSlidingCell/master/res/sliding_cell.gif", "https://raw.githubusercontent.com/ask-fm/AFMSlidingCell/master/res/sliding_cell.png"
   s.license          = 'MIT'
   s.author           = { "Artjoms Haleckis" => "artjoms.haleckis@ask.fm" }
   s.source           = { :git => "https://github.com/ask-fm/AFMSlidingCell.git", :tag => s.version.to_s }
