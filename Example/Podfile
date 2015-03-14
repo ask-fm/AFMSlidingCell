@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'AFMSlidingCell', :exclusive => true do
+  pod "AFMSlidingCell", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "AFMSlidingCell", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
