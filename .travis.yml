@@ -1,0 +1,12 @@
+# reference: http://www.objc.io/issue-6/travis-ci.html
+
+language: objective-c
+before_install:
+  - brew update
+  - gem install cocoapods -v '= 0.36.0'
+  - cd Example && pod install && cd -
+script:
+  - xctool build-tests -workspace Example/AFMSlidingCell.xcworkspace -scheme AFMSlidingCell -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool run-tests -workspace Example/AFMSlidingCell.xcworkspace -scheme AFMSlidingCell -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination "platform=iOS Simulator,name=iPhone 5s,OS=latest"
+  - xctool run-tests -workspace Example/AFMSlidingCell.xcworkspace -scheme AFMSlidingCell -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination "platform=iOS Simulator,name=iPhone 6,OS=latest"
+  - xctool run-tests -workspace Example/AFMSlidingCell.xcworkspace -scheme AFMSlidingCell -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination "platform=iOS Simulator,name=iPhone 6 Plus,OS=latest"
